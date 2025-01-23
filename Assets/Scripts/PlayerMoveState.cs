@@ -20,7 +20,8 @@ public class PlayerMoveState : PlayerState
     {
         base.Update();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        player.SetVelocity(xInput * player.moveSpeed, rb.linearVelocityY);
+        if (xInput == 0)
         {
             stateMachine.ChangeState(player.idleState);
         }
