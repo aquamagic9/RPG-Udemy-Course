@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -5,6 +6,13 @@ public class Player : MonoBehaviour
     [Header("Move Info")]
     public float moveSpeed = 12f;
     public float jumpForce = 6f;
+
+    [Header("Collision Info")]
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private float groundCheckDistance;
+    [SerializeField] private Transform wallCheck;
+    [SerializeField] private float wallCheckDistance;
+    [SerializeField] private LayerMask whatIsGround;
 
     #region Components
     public Animator anim {  get; private set; }
@@ -44,5 +52,13 @@ public class Player : MonoBehaviour
     public void SetVelocity(float _xVelocity, float _yVelocity)
     {
         rb.linearVelocity = new Vector2(_xVelocity, _yVelocity);
+    }
+
+    public bool IsGroundDetected() => Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(groundCheck.position, new Vector3(groundCheck.position.x, groundCheck.position.y - groundCheckDistance));
+        Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y));
     }
 }
