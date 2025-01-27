@@ -1082,6 +1082,8 @@ MonoBehaviour:
   moveSpeed: 1.5
   idleTime: 2
   attackDistance: 1.5
+  attackCooldown: 2
+  lastTimeAttacked: 0
 --- !u!4 &981474916
 Transform:
   m_ObjectHideFlags: 0
@@ -8292,7 +8294,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1959776008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84b8862e21478e546bf013fd5e7ec09f, type: 3}
+  m_Script: {fileID: 11500000, guid: c30698ec21bec4549bb902134205ba2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2013839871
