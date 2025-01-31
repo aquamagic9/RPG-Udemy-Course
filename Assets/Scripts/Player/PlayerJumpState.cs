@@ -12,11 +12,6 @@ public class PlayerJumpState : PlayerState
         rb.linearVelocityY = player.jumpForce;
     }
 
-    public override void Exit()
-    {
-        base.Exit();
-    }
-
     public override void Update()
     {
         base.Update();

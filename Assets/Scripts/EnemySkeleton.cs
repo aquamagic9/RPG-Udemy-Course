@@ -25,9 +25,4 @@ public class EnemySkeleton : Enemy
 
         stateMachine.Initialize(idleState);
     }
-    
-    protected override void Update()
-    {
-        base.Update();
-    }
 }

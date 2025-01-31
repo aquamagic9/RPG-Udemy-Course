@@ -12,11 +12,6 @@ public class PlayerDashState : PlayerState
         stateTimer = player.dashDuration;
     }
 
-    public override void Exit()
-    {
-        base.Exit();
-    }
-
     public override void Update()
     {
         base.Update();

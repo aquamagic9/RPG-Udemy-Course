@@ -8,11 +8,6 @@ public class SkeletonAttackState : EnemyState
         enemy = _enemy;
     }
 
-    public override void Enter()
-    {
-        base.Enter();
-    }
-
     public override void Exit()
     {
         base.Exit();

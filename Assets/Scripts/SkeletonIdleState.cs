@@ -20,9 +20,4 @@ public class SkeletonIdleState : SkeletonGroundedState
         if (stateTimer < 0)
             stateMachine.ChangeState(enemy.moveState);
     }
-
-    public override void Exit()
-    {
-        base.Exit();
-    }
 }
