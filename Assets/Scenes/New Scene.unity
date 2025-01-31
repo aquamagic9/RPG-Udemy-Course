@@ -325,7 +325,7 @@ Transform:
   m_GameObject: {fileID: 136535445}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.47001, y: 3.4600003, z: -10}
+  m_LocalPosition: {x: -43.420006, y: 3.4400003, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -407,6 +407,37 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!1 &181098389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 181098390}
+  m_Layer: 0
+  m_Name: AttackCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &181098390
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181098389}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.78, y: -0.27, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 981474916}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &274799653
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,6 +828,37 @@ Transform:
   - {fileID: 1446992323}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &518463026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 518463027}
+  m_Layer: 6
+  m_Name: AttackCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &518463027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518463026}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.91, y: -0.36, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1186372944}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &828262335
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,7 +960,7 @@ Transform:
   m_GameObject: {fileID: 851028250}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.47001, y: 3.4600003, z: -10}
+  m_LocalPosition: {x: -43.420006, y: 3.4400003, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1050,7 +1112,7 @@ GameObject:
   - component: {fileID: 981474915}
   - component: {fileID: 981474918}
   - component: {fileID: 981474917}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy_Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1069,6 +1131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dce01cffbe0440249c8ef3d30d143c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackCheck: {fileID: 181098390}
+  attackCheckRadius: 0.71
   groundCheck: {fileID: 2013839872}
   groundCheckDistance: 0.15
   wallCheck: {fileID: 828262336}
@@ -1081,6 +1145,7 @@ MonoBehaviour:
     m_Bits: 64
   moveSpeed: 1.5
   idleTime: 2
+  battleTime: 0
   attackDistance: 1.5
   attackCooldown: 2
   lastTimeAttacked: 0
@@ -1100,6 +1165,7 @@ Transform:
   - {fileID: 1959776009}
   - {fileID: 2013839872}
   - {fileID: 828262336}
+  - {fileID: 181098390}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &981474917
@@ -1203,13 +1269,14 @@ Transform:
   m_GameObject: {fileID: 1186372943}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.47, y: 3.53, z: 0}
+  m_LocalPosition: {x: -43.42, y: 3.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 274799654}
   - {fileID: 1531838538}
   - {fileID: 60734775}
+  - {fileID: 518463027}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1186372945
@@ -1224,6 +1291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a974caea983c949837002a384af738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackCheck: {fileID: 518463027}
+  attackCheckRadius: 0.69
   groundCheck: {fileID: 1531838538}
   groundCheckDistance: 0.15
   wallCheck: {fileID: 60734775}
