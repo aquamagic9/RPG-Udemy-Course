@@ -517,7 +517,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 14d59502132c24a39ae7e640375039a4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1112,6 +1112,7 @@ GameObject:
   - component: {fileID: 981474915}
   - component: {fileID: 981474918}
   - component: {fileID: 981474917}
+  - component: {fileID: 981474919}
   m_Layer: 7
   m_Name: Enemy_Skeleton
   m_TagString: Untagged
@@ -1241,6 +1242,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &981474919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981474914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859bc429f46724bbcab7554c3c82b667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitMat: {fileID: 2100000, guid: 0e4252f253e234b47a87b3d67fd0ad5d, type: 2}
+  hitDuration: 0.1
 --- !u!1 &1186372943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,6 +1268,7 @@ GameObject:
   - component: {fileID: 1186372945}
   - component: {fileID: 1186372947}
   - component: {fileID: 1186372946}
+  - component: {fileID: 1186372948}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -1373,6 +1389,20 @@ CapsuleCollider2D:
   m_Offset: {x: -0.06272173, y: -0.29479206}
   m_Size: {x: 0.8010645, y: 2.0913584}
   m_Direction: 0
+--- !u!114 &1186372948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186372943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859bc429f46724bbcab7554c3c82b667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitMat: {fileID: 2100000, guid: 0e4252f253e234b47a87b3d67fd0ad5d, type: 2}
+  hitDuration: 0.1
 --- !u!1 &1223485118
 GameObject:
   m_ObjectHideFlags: 0
@@ -8322,7 +8352,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 14d59502132c24a39ae7e640375039a4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
