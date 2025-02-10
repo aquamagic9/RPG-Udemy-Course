@@ -13,6 +13,7 @@ public class PlayerPrimaryAttack : PlayerState
     public override void Enter()
     {
         base.Enter();
+        xInput = 0;  //we need this to fix bug on attack direction
 
         if (comboCounter > 2 || Time.time >= lastTimeAttacked + comeboWindow)
             comboCounter = 0;
