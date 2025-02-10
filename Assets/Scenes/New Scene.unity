@@ -1132,6 +1132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dce01cffbe0440249c8ef3d30d143c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockbackDirection: {x: 5, y: 1}
+  knockbackDuration: 0.07
   attackCheck: {fileID: 181098390}
   attackCheckRadius: 0.71
   groundCheck: {fileID: 2013839872}
@@ -1307,6 +1309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a974caea983c949837002a384af738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockbackDirection: {x: 0, y: 0}
+  knockbackDuration: 0
   attackCheck: {fileID: 518463027}
   attackCheckRadius: 0.69
   groundCheck: {fileID: 1531838538}
